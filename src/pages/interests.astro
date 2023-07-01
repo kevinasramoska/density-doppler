@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import image from './judo.jpg';
+---
+
+<Layout title="homepage">
+	<main>
+		<h1>Kevinas Ramoska</h1>
+		<h2>Interests</h2>
+		<p class="introduction">
+            <ul>
+            <li>I'm a software engineer with a passion for building things and solving problems.</li>
+            <li>
+                I'm interested in web development, machine learning, and computer graphics.
+            </li>
+            <li>
+            I also enjoy learning about the latest technologies and trends in the industry.
+            </li>
+            <li>
+            I always did sports from a young age, and I'm currently interested in weightlifting and judo.
+            </li>
+           <li>
+            I compete internationally in judo and have won multiple medals aboard.        
+            </li> 
+            </ul>
+        </p>
+		<img src={image} width="620">Winning the final in Matsumae Cup in Velje, Denamrk</img>
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
